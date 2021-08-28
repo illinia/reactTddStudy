@@ -11,7 +11,7 @@ describe('<TodoForm />', () => {
     return {
       ...utils,
       input,
-      button
+      button,
     };
   };
 
@@ -25,9 +25,9 @@ describe('<TodoForm />', () => {
     const { input } = setup();
     fireEvent.change(input, {
       target: {
-        value: 'TDD 배우기'
-      }
-    })
+        value: 'TDD 배우기',
+      },
+    });
     expect(input).toHaveAttribute('value', 'TDD 배우기');
   });
 
@@ -36,12 +36,11 @@ describe('<TodoForm />', () => {
     const { input, button } = setup({ onInsert });
     fireEvent.change(input, {
       target: {
-        value: 'TDD 배우기'
-      }
+        value: 'TDD 배우기',
+      },
     });
     fireEvent.click(button);
     expect(onInsert).toBeCalledWith('TDD 배우기');
     expect(input).toHaveAttribute('value', '');
-  })
+  });
 });
-https://learn-react-test.vlpt.us/#/06-rtl-tdd

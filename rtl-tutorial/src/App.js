@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
 import Counter from './Counter';
+import DelayedToggle from './DelayedToggle';
+import UserProfile from './UserProfile';
 
 function App() {
   return (
-    <Counter />
+    <UserProfile id={1} />
   );
 }
 
